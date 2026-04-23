@@ -22,7 +22,7 @@ The goal is to make compliance reproducible, testable, and auditable by design.
 ---
 ## Design principles
 - **Machine-readable first**
-    Controls should be expressed in formats that systems can evaluate, not just humans.
+Controls should be expressed in formats that systems can evaluate, not just humans.
 - **Evidence-driven**
 Compliance claims must be backed by integrity-protected, time-bound evidence.
 - **Tool-agnostic**
