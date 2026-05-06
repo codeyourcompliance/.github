@@ -1,64 +1,77 @@
-# codeyourcompliance
+# CodeYourCompliance
 
-## Engineering-first compliance automation for regulated systems.
+CodeYourCompliance is a public technical project for **MAS TRM-inspired compliance automation**.
 
-codeyourcompliance is an open initiative focused on translating regulatory and compliance requirements—such as MAS Technology Risk Management (TRM)—into **machine-readable, verifiable, and automation-ready control models**.
+The core thesis is simple:
 
-We treat compliance as an engineering problem, not a documentation exercise.
+> Compliance is not documentation. It is replayable, timestamped, verifiable evidence.
 
----
-## What we do
+This GitHub organization stores the public technical artifacts behind the writing on CodeYourCompliance.
 
-Traditional compliance workflows rely on interpretation, manual evidence collection, and narrative-heavy reporting.
-codeyourcompliance focuses on the opposite approach:
+The current focus is narrow by design:
 
-- Structured control models instead of free-text interpretations
-- Verifiable evidence instead of screenshots and attestations
-- Deterministic logic instead of subjective judgments
-- Automation-ready artifacts instead of audit-only documents
+```text
+system state
+-> read-only collection
+-> timestamped evidence
+-> integrity verification
+-> derived facts
+-> policy evaluation
+-> audit narrative
+```
 
-The goal is to make compliance reproducible, testable, and auditable by design.
+## What this project explores
 
----
-## Design principles
-- **Machine-readable first**
-Controls should be expressed in formats that systems can evaluate, not just humans.
-- **Evidence-driven**
-Compliance claims must be backed by integrity-protected, time-bound evidence.
-- **Tool-agnostic**
-Models are not tied to specific vendors, platforms, or implementations.
-- **Minimal but opinionated**
-Start with the smallest viable abstraction that can realistically be automated.
+CodeYourCompliance treats compliance automation as an evidence engineering problem.
 
----
-## Current focus
-- MAS TRM–aligned control modeling
-- Access Control, Logging, and Identity as automation entry points
-- Policy-as-Code and compliance automation workflows
-- Audit-ready control narratives generated from verified evidence
+The work focuses on reusable structures such as:
 
----
+- evidence schemas
+- sample evidence packages
+- collector metadata
+- policy-as-code examples
+- OPA/Rego validation patterns
+- integrity verification logic
+- audit narrative examples
+- reference pipeline documentation
+
+The point is not to generate nicer reports.
+
+The point is to make technical compliance evidence harder to fake, harder to mutate, and easier to replay.
+
+## Current public focus
+
+The first public phase is MAS TRM-inspired compliance automation.
+
+That means:
+
+- MAS TRM is used as the regulatory context.
+- Engineering artifacts are used to model evidence, verification, and policy evaluation.
+- Public examples remain synthetic, minimal, and reusable.
+- The project avoids client-specific advisory work.
+
+Early examples focus on TLS certificate lifecycle evidence, read-only evidence collection, integrity verification, and policy evaluation using OPA/Rego.
+
 ## Repositories
-- **mas-trm-control-model**
-A minimal, machine-readable control schema for selected MAS TRM domains, designed to serve as a foundation for compliance automation.
 
-Additional repositories will expand on:
-- Evidence modeling
-- Verification logic patterns
-- Compliance reporting structures
-- Important notice
+- [`evidence-validation-pipeline`](https://github.com/codeyourcompliance/evidence-validation-pipeline)  
+  A minimal MAS TRM-inspired evidence validation pipeline, starting with replayable TLS evidence and audit narratives generated from verified facts.
 
----
-## Important notice
-This organization and its repositories:
-- Are **not official standards**
-- Do **not** represent **regulatory guidance**
-- Do **not** replace **legal or compliance advice**
+- [`mas-trm-control-model`](https://github.com/codeyourcompliance/mas-trm-control-model)  
+  A minimal machine-readable control model for selected MAS TRM-inspired control areas.
 
-They are intended to support engineering teams experimenting with compliance automation in regulated environments.
+Additional repositories may cover evidence schemas, reusable policy patterns, and report structures as the public model matures.
 
----
-## Philosophy
+## Boundary
 
->Compliance should not depend on who is interpreting the document. 
-It should depend on whether the system can prove its state.
+This project is not legal, regulatory, audit, or certification advice.
+
+MAS TRM-inspired means engineering interpretation. It does not claim that MAS TRM prescribes Ansible, SHA256, Python, OPA, Rego, JSON schemas, or any specific implementation pattern.
+
+The purpose is to explore how technical compliance evidence can be collected, verified, evaluated, and replayed.
+
+## Writing
+
+Articles are published at:
+
+https://www.codeyourcompliance.com
